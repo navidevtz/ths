@@ -1,0 +1,23 @@
+/*
+    Truck Hire System (T) Ltd 
+    Custom stylesheet
+    Developed by Navilindo AM
+*/
+
+/* custom colors */
+
+:root {
+    --golden-yellow: #fa7617;
+    --pale-yellow: #f5ac52;
+    --forest-green: #478936ff;
+    --olivine: #ABC296ff;
+    --brunswick-green: #0C4C3Eff;
+    --asparagus: #65943Dff;
+    --light: #f8f9fa;
+}
+
+/* body */
+body, html {
+    font-family: 'Poppins', sans-serif !important;
+}
+
