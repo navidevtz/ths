@@ -62,7 +62,17 @@
             
             <h5 class="section-subtitle text-center fw-bold pb-3">Login</h5>
             
-           
+            <form action="/sign_in" method="post">
+                <div class="mb-3">
+                  <label for="username" class="form-label">Username</label>
+                  <input type="text" class="form-control" id="username" placeholder="Enter your username">
+                </div>
+                <div class="mb-3">
+                  <label for="password" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                </div>
+                <button type="submit" class="btn">Sign In</button>
+            </form>
         </div>
     </main>
 
