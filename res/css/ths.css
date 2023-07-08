@@ -49,6 +49,12 @@ body, html {
 .jumbo {
     height:100vh;
 }
+
+#homePageBtn {
+    color: var(--golden-yellow);
+    outline: 2px solid var(--golden-yellow);
+}
+
 .thumb {
     height: 300px;
     width: auto;
