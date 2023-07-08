@@ -19,7 +19,13 @@ body, html {
 
  /* header */
 
-
+/* Jumbotron */
+.subTitle {
+    color: var(--golden-yellow);
+}
+#homeHireBtn {
+    background-color: var(--golden-yellow);
+}
 
 /* footer */
 .ft-header {
