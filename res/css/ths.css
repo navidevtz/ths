@@ -9,11 +9,7 @@
 :root {
     --golden-yellow: #fa7617;
     --pale-yellow: #f5ac52;
-    --forest-green: #478936ff;
-    --olivine: #ABC296ff;
-    --brunswick-green: #0C4C3Eff;
-    --asparagus: #65943Dff;
-    --light: #f8f9fa;
+    --light-yellow: #fcab4f;
 }
 
 /* body */
@@ -24,7 +20,8 @@ body, html {
  /* header */
 
 
- /* footer */
- .ft-header {
+
+/* footer */
+.ft-header {
     color: var(--golden-yellow);
- }
+}
