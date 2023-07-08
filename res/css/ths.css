@@ -17,6 +17,7 @@ body, html {
     font-family: 'Poppins', sans-serif !important;
 }
 
+/* General components */
  /* header */
 
 /* Jumbotron */
@@ -25,6 +26,10 @@ body, html {
 }
 #homeHireBtn {
     background-color: var(--golden-yellow);
+}
+
+.section-subtitle {
+    color: var(--golden-yellow);
 }
 
 /* footer */
@@ -36,3 +41,11 @@ body, html {
     background-color: var(--golden-yellow);
     color: white;
 }
+
+/* Pages  */
+/* Home */
+.thumb {
+    height: 300px;
+    width: auto;
+}
+
