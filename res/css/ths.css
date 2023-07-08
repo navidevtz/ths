@@ -26,6 +26,7 @@ body, html {
 }
 #homeHireBtn {
     background-color: var(--golden-yellow);
+    color: white;
 }
 
 .section-subtitle {
