@@ -31,3 +31,8 @@ body, html {
 .ft-header {
     color: var(--golden-yellow);
 }
+
+.copy-left {
+    background-color: var(--golden-yellow);
+    color: white;
+}
