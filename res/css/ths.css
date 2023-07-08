@@ -52,3 +52,8 @@ body, html {
 .pay-day {
     color: var(--golden-yellow);
 }
+
+.hireThumb > .btn {
+    background-color: var(--golden-yellow);
+    color: white;
+}
