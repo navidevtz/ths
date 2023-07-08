@@ -49,3 +49,6 @@ body, html {
     width: auto;
 }
 
+.pay-day {
+    color: var(--golden-yellow);
+}
