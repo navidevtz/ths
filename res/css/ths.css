@@ -21,3 +21,10 @@ body, html {
     font-family: 'Poppins', sans-serif !important;
 }
 
+ /* header */
+
+
+ /* footer */
+ .ft-header {
+    color: var(--golden-yellow);
+ }
