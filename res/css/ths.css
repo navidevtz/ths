@@ -68,3 +68,9 @@ body, html {
     background-color: var(--golden-yellow);
     color: white;
 }
+
+/* Register page */
+#registerBtn {
+    background-color: var(--golden-yellow);
+    color: white;
+}
