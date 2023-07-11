@@ -14,7 +14,9 @@
 
 /* body */
 body, html {
-    font-family: 'Poppins', sans-serif !important;
+    /* font-family: 'Poppins', sans-serif !important; */
+    font-family: 'Kameron', serif !important;
+    font-family: 'Playfair', serif;
 }
 
 /* General components */
