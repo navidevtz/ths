@@ -7,9 +7,9 @@
 /* custom colors */
 
 :root {
-    --golden-yellow: #fa7617;
-    --pale-yellow: #f5ac52;
-    --light-yellow: #fcab4f;
+    --ths-darkblue: #232323;
+    --ths-yellow: #e1bc25;
+    --ths-red: #ef1d26;
 }
 
 /* body */
@@ -22,24 +22,24 @@ body, html {
 
 /* Jumbotron */
 .subTitle {
-    color: var(--golden-yellow);
+    color: var(--ths-red);
 }
 #homeHireBtn {
-    background-color: var(--golden-yellow);
+    background-color: var(--ths-red);
     color: white;
 }
 
 .section-subtitle {
-    color: var(--golden-yellow);
+    color: var(--ths-red);
 }
 
 /* footer */
 .ft-header {
-    color: var(--golden-yellow);
+    color: var(--ths-red);
 }
 
 .copy-left {
-    background-color: var(--golden-yellow);
+    background-color: var(--ths-red);
     color: white;
 }
 
@@ -51,8 +51,8 @@ body, html {
 }
 
 #homePageBtn {
-    color: var(--golden-yellow);
-    outline: 2px solid var(--golden-yellow);
+    color: var(--ths-red);
+    outline: 2px solid var(--ths-red);
 }
 
 .thumb {
@@ -61,22 +61,22 @@ body, html {
 }
 
 .pay-day {
-    color: var(--golden-yellow);
+    color: var(--ths-red);
 }
 
 .hireThumb > .btn {
-    background-color: var(--golden-yellow);
+    background-color: var(--ths-red);
     color: white;
 }
 
 /* Register page */
 #registerBtn {
-    background-color: var(--golden-yellow);
+    background-color: var(--ths-red);
     color: white;
 }
 
 /* Login page */
 #loginBtn {
-    background-color: var(--golden-yellow);
+    background-color: var(--ths-red);
     color: white;
 }
