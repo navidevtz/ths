@@ -7,22 +7,21 @@
         public function connect(){
 
             $host = '127.0.0.1';
-            $user= 'rooter';
-            $pass = 'toor';
-            $db = 'testdb';
+            $user= 'root';
+            $pass = '';
+            $db = 'ths';
 
-            //include_once dirname(__FILE__) . '/con-vars.php';
             try {
                 //echo "hello " . $host . " " . $db ." " . $user . " " . $pass . "<br>";
                 $conlink = new PDO("mysql:server=$host'; dbname=$db; charset=utf8;", $user, $pass);
-                //echo "hello one <br>";
+                // echo "hello one <br>";
                 $conlink->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 if($conlink){
                     //echo "DB connected successfully<br>";
                 }
             }
             catch(PDOException $e) {
-                echo "Connection failed! " . $e->getMessage();
+                echo "<em>Connection failed!</em> <br>" . $e->getMessage();
             }
             //echo "helllo<br>";
             return $conlink;
@@ -37,15 +36,15 @@
                     return $stmt;
                 }
             } catch (PDOException $e) {
-                echo "Database processing error. " . $e->getMessage();
+                echo "<em>Database processing error.</em> <br>" . $e->getMessage();
             }
         }
 
     }
 
     // for simple testing purpose
-    /*
-    echo "hel<br>";
+    
+    //echo "hel<br>";
     $db = new DB();
     $c = $db->connect();
     $q = "SELECT * from users";
@@ -58,5 +57,5 @@
             echo $u[0] . " " .$u[1] . "<br/>";
         }
     }
-    */
+    
 ?>

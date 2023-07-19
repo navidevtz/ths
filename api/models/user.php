@@ -20,8 +20,7 @@
 
 
         function add($name){
-            
-            $user = "INSERT INTO users (id,name) VALUES (?,?)"; 
+            $user = "INSERT INTO users (id,name) VALUES (?,?)";
             $stmt = $this->con->prepare($user);
             $stmt->bind_param("is", $id, $name);
             if($stmt->execute()){
@@ -31,9 +30,7 @@
         }
 
         function view($id){
-            
             $db = new DB();
-            
             $sql = "SELECT * from users where id = $id";
 
             $result = $db->dbQuery($sql);
@@ -45,15 +42,13 @@
                 $user = array(
                     'id' => $userdata['id'],
                     'name' => $userdata['name']
-                );    
+                );
             }
             return $user;
         }
 
         function view_all(){
-            
             $db = new DB();
-            
             $sql = "SELECT * from users";
             $result = $db->dbQuery($sql);
 
@@ -64,7 +59,7 @@
                 foreach($userdata as $u){
                     $user = array (
                        'id' => $u['id'],
-                       'name' => $u['name']                   
+                       'name' => $u['name']
                     );
                     array_push($users, $user);
 
@@ -74,31 +69,27 @@
         }
 
         function update($id,$name){
-            
             $sql = "UPDATE users SET name = ? WHERE id = ?";
-            
             $stmt = $this->con->prepare($sql);
             $stmt->bind_param("is", $id, $name);
 
             $result = $db->dbQuery($sql);
 
             if($stmt->execute()){
-                return true; 
+                return true;
             }
-            else return false; 
+            else return false;
         }
 
         function confirm($id){
-            
             $db = new DB;
-
             $sql = "UPDATE users SET status = 'active' WHERE id = $id";
             $result = $db->dbQuery($sql);
 
             if($result){
-                return true; 
+                return true;
             }
-            else return false; 
+            else return false;
         }
 
         function delete($id){
