@@ -2,14 +2,13 @@
 
     /*
         we are using user model to make our DB operations
-    */ 
+    */
 
     class UserModel{
         private $con;
 
         // this constructor makes connection whenever the file is created
         function __construct(){
-            
             require_once '../src/connection.php';
 
             $db = new DB();
@@ -93,16 +92,15 @@
         }
 
         function delete($id){
-            
             $stmt = $this->con->prepare("DELETE FROM users WHERE id = ? ");
             $stmt->bind_param("i", $id);
             //
             $result = $db->dbQuery($sql);
 
             if($stmt->execute()){
-                return true; 
+                return true;
             }
-            else return false; 
+            else return false;
         }
     }
 
