@@ -23,7 +23,6 @@
             catch(PDOException $e) {
                 echo "<em>Connection failed!</em> <br>" . $e->getMessage();
             }
-            //echo "helllo<br>";
             return $conlink;
         }
 
@@ -44,7 +43,6 @@
 
     // for simple testing purpose
     
-    //echo "hel<br>";
     $db = new DB();
     $c = $db->connect();
     $q = "SELECT * from users";
