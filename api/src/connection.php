@@ -12,11 +12,11 @@
             $db = 'ths';
 
             try {
-                //echo "hello " . $host . " " . $db ." " . $user . " " . $pass . "<br>";
+                // Database connection
                 $conlink = new PDO("mysql:server=$host'; dbname=$db; charset=utf8;", $user, $pass);
-                // echo "hello one <br>";
                 $conlink->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 if($conlink){
+                    // uncomment to check
                     //echo "DB connected successfully<br>";
                 }
             }
