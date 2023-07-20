@@ -5,7 +5,7 @@ require_once("../src/connection.php");
 class Ads{
 
     function get(){
-        $conekt = new Connection;
+        $conekt = new DB;
         $con = $conekt->connect();
 
         $posts = array();
