@@ -42,7 +42,7 @@
     }
 
     // for simple testing purpose
-    
+    /*
     $db = new DB();
     $c = $db->connect();
     $q = "SELECT * from users";
@@ -55,5 +55,5 @@
             echo $u[0] . " " .$u[1] . "<br/>";
         }
     }
-    
+    */
 ?>
