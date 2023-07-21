@@ -37,7 +37,7 @@
             $userdata = $result->fetch(PDO::FETCH_ASSOC);
             //$user = array();
 
-            if($userdata['id'] != null){ 
+            if($userdata['id'] != null){
                 $user = array(
                     'id' => $userdata['id'],
                     'name' => $userdata['name']
@@ -61,7 +61,6 @@
                         'name' => $u['name']
                     );
                     array_push($users, $user);
-
                 }
             }
             return $users;
