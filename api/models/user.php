@@ -21,7 +21,7 @@
         function add($name){
             $user = "INSERT INTO users (id,name) VALUES (?,?)";
             $stmt = $this->con->prepare($user);
-            $stmt->bind_param("is", $id, $name);
+            $stmt->bindParam("is", $id, $name);
             if($stmt->execute()){
                 return true;
             }
@@ -57,8 +57,8 @@
             if($userdata != null){
                 foreach($userdata as $u){
                     $user = array (
-                       'id' => $u['id'],
-                       'name' => $u['name']
+                        'id' => $u['id'],
+                        'name' => $u['name']
                     );
                     array_push($users, $user);
 
@@ -68,9 +68,10 @@
         }
 
         function update($id,$name){
+            $db = new DB();
             $sql = "UPDATE users SET name = ? WHERE id = ?";
             $stmt = $this->con->prepare($sql);
-            $stmt->bind_param("is", $id, $name);
+            $stmt->bindParam("is", $id, $name);
 
             $result = $db->dbQuery($sql);
 
@@ -92,10 +93,11 @@
         }
 
         function delete($id){
+            $db = new DB();
             $stmt = $this->con->prepare("DELETE FROM users WHERE id = ? ");
-            $stmt->bind_param("i", $id);
+            $stmt->bindParam("i", $id);
             //
-            $result = $db->dbQuery($sql);
+            $result = $db->dbQuery($stmt);
 
             if($stmt->execute()){
                 return true;
@@ -105,6 +107,6 @@
     }
 
 
-    //$us = new UserModel;
-    // $users = $us->view_all();
+    $us = new UserModel;
+    $users = $us->view_all();
 ?>
