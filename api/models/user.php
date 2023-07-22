@@ -16,10 +16,10 @@
         }
 
 
-        function add($name){
+        function add($username){
             $user = "INSERT INTO users (id,username,password,email) VALUES (?,?,?,?)";
             $stmt = $this->con->prepare($user);
-            $stmt->bindParam("is", $id, $name, $password, $email);
+            $stmt->bindParam("is", $id, $username, $password, $email);
             if($stmt->execute()){
                 return true;
             }
@@ -66,11 +66,25 @@
             return $users;
         }
 
-        function update($id,$name){
+        function update($id,$username){
             $db = new DB();
-            $sql = "UPDATE users SET name = ? WHERE id = ?";
+            $sql = "UPDATE users SET username = ? WHERE id = ?";
             $stmt = $this->con->prepare($sql);
-            $stmt->bindParam("is", $id, $name);
+            $stmt->bindParam("is", $id, $username);
+
+            $result = $db->dbQuery($sql);
+
+            if($stmt->execute()){
+                return true;
+            }
+            else return false;
+        }
+
+        function changePassword($id,$password){
+            $db = new DB();
+            $sql = "UPDATE users SET password = ? WHERE id = ?";
+            $stmt = $this->con->prepare($sql);
+            $stmt->bindParam("is", $id, $password);
 
             $result = $db->dbQuery($sql);
 
