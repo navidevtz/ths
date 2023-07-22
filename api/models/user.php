@@ -10,18 +10,16 @@
         // this constructor makes connection whenever the file is created
         function __construct(){
             require_once '../src/connection.php';
-
             $db = new DB();
-
             $this->con = $db->connect();
 
         }
 
 
         function add($name){
-            $user = "INSERT INTO users (id,name) VALUES (?,?)";
+            $user = "INSERT INTO users (id,username,password,email) VALUES (?,?,?,?)";
             $stmt = $this->con->prepare($user);
-            $stmt->bindParam("is", $id, $name);
+            $stmt->bindParam("is", $id, $name, $password, $email);
             if($stmt->execute()){
                 return true;
             }
@@ -40,7 +38,8 @@
             if($userdata['id'] != null){
                 $user = array(
                     'id' => $userdata['id'],
-                    'name' => $userdata['name']
+                    'username' => $userdata['username'],
+                    'email' => $userdata['email']
                 );
             }
             return $user;
@@ -58,7 +57,8 @@
                 foreach($userdata as $u){
                     $user = array (
                         'id' => $u['id'],
-                        'name' => $u['name']
+                        'username' => $userdata['username'],
+                        'email' => $userdata['email']
                     );
                     array_push($users, $user);
                 }
