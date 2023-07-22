@@ -66,7 +66,7 @@
             return $users;
         }
 
-        function update($id,$username){
+        function changeUsername($id,$username){
             $db = new DB();
             $sql = "UPDATE users SET username = ? WHERE id = ?";
             $stmt = $this->con->prepare($sql);
@@ -122,4 +122,7 @@
 
     $us = new UserModel;
     $users = $us->view_all();
+    foreach($users as $u){
+        echo $users['username'] . "<br>";
+    }
 ?>
