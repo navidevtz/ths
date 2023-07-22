@@ -64,6 +64,7 @@
                 }
             }
             return $users;
+            return json_encode($users);
         }
 
         function changeUsername($id,$username){
